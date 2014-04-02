@@ -5,6 +5,9 @@
   - アンカー `{#korekore}` → {#korekore}
     
   - リンク `[[https://www.google.co.jp/][ぐーぐるせんせい]]` → [[https://www.google.co.jp/][ぐーぐるせんせい]]
+    
+  - 画像の挿入 `![[http://fuzz.co.jp/img/fuzz_Logo.jpg][ロゴ]]`  
+    ![[http://fuzz.co.jp/img/fuzz_Logo.jpg][ロゴ]]
 
 ** 中項目
 *** 少項目
@@ -14,8 +17,8 @@
       
 *** 少項目
 - *強調*
-- *強調*
-- *強調*
+- _強調_
+- __強調__
     
 *** 少項目
 - +取り消し+
@@ -76,8 +79,7 @@
 ---
 
 *** 表 {#tables}
-- pukiwikiとかと一緒  
-  これが…
+- これが…
       | aaa | bbb | ccc |
       |-----+-----+-----|
       | xxx | yyy | zzz |

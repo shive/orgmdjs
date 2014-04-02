@@ -1,6 +1,7 @@
 ﻿# -*- mode: org; coding: utf-8-with-signature-unix -*-
 = orgmdjs {#top}
 
+- repos https://github.com/shive/orgmdjs/tree/gh-pages
 - see http://shive.github.io/orgmdjs/html/README.html
 
 * 何をやっているのか
@@ -8,7 +9,7 @@
 - .htmlはファイル名しか見てないのでファイルコピぺで増やせばok
 - javascript動作なのでローカルコピーしても動きます（chromeは起動オプションに *--allow-file-access-from-files* が必要）
   - httpで閲覧できるリポジトリであれば、ローカルにあるワーキングコピーで編集＆確認してリポジトリにコミットでwikiライクな利用が可能
-- [さんぷる](http://shive.github.io/orgmdjs/html/さんぷる.html)
+- [[http://shive.github.io/orgmdjs/html/さんぷる.html][さんぷる]]
 
 
 * LICENSE

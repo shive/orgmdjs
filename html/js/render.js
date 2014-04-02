@@ -1,6 +1,7 @@
 ﻿// -*- coding: utf-8-with-signature-dos -*-
 //======================================================================================================================
 //! @author hshibuya <goe@fuzz.co.jp>
+//! @license public domain
 
 function onload() {
     var options = {

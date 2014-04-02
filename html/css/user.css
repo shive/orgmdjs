@@ -1,10 +1,19 @@
+/**
+ * @author hshibuya <goe@fuzz.co.jp>
+ * @license public domain
+ */
+
 p, ul, dl, ol, li {
   margin: 5px 0;
 }
 em, strong {
   font-weight: bold;
+  font-style: normal;
   color: red;
 }
 s {
   color: silver;
+}
+a {
+  text-decoration: none;
 }

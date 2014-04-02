@@ -4,7 +4,7 @@
 * 大項目 {#anchor}
   - アンカー `{#korekore}` → {#korekore}
     
-  - リンク `[ぐーぐるせんせい](https://www.google.co.jp/)` → [ぐーぐるせんせい](https://www.google.co.jp/)
+  - リンク `[[https://www.google.co.jp/][ぐーぐるせんせい]]` → [[https://www.google.co.jp/][ぐーぐるせんせい]]
 
 ** 中項目
 *** 少項目
@@ -63,7 +63,7 @@
   ~~~
   あへあへ うひは
   おおさか めいぶつ ぱちぱちぱんち
-  かみさまー
+  あーめま
   ~~~
 
 - 引用
@@ -75,19 +75,19 @@
 水平線は３つ以上のハイフン
 ---
 
-*** 表
+*** 表 {#tables}
 - pukiwikiとかと一緒  
   これが…
-      | aaa | bbb | ccc |
-      |-----|-----|-----|
-      | xxx | yyy | zzz |
-      | xxx | yyy | zzz |
-      | xxx | yyy | zzz |
-      | xxx | yyy | zzz |
+      | aaa   | bbb | ccc |
+      |-------+-----+-----|
+      | xxx   | yyy | zzz |
+      | xxx   | yyy | zzz |
+      | xxx   | yyy | zzz |
+      | xxx   | yyy | zzz |
 - こうなる
 
 | aaa | bbb | ccc |
-|-----|-----|-----|
+|-----+-----+-----|
 | xxx | yyy | zzz |
 | xxx | yyy | zzz |
 | xxx | yyy | zzz |

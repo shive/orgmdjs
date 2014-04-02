@@ -1,0 +1,10 @@
+p, ul, dl, ol, li {
+  margin: 5px 0;
+}
+em, strong {
+  font-weight: bold;
+  color: red;
+}
+s {
+  color: silver;
+}

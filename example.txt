@@ -5,7 +5,13 @@
   - アンカー `{#korekore}` → {#korekore}
     
   - リンク `[[https://www.google.co.jp/][ぐーぐるせんせい]]` → [[https://www.google.co.jp/][ぐーぐるせんせい]]
-    
+  - Ｍ↓のリンク
+    - `[その壱](http://www.yahoo.co.jp/)` → [その壱](http://www.yahoo.co.jp/) // ただのリンク
+    - `[その弐](http://www.yahoo.co.jp/ "やほー")` → [その弐](http://www.yahoo.co.jp/ "やほー") // ツールチップつき
+    - `[その参][yahoo]` → [その参][yahoo] // ＵＲＬを後で書く
+
+[yahoo]:http://www.yahoo.co.jp/
+
   - 画像の挿入 `![[http://fuzz.co.jp/img/fuzz_Logo.jpg][ロゴ]]`  
     ![[http://fuzz.co.jp/img/fuzz_Logo.jpg][ロゴ]]
 

@@ -20,3 +20,15 @@ a {
 img {
   vertical-align: middle;
 }
+table tr th {
+  border: 1px solid #e0e0e8;
+  padding: 6px 13px;
+  background-color: #e8e8f0;
+}
+table tr td {
+  border: 1px solid #e0e0e8;
+  padding: 6px 13px;
+}
+table {
+  border-spacing: 0px;
+}

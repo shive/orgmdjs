@@ -14,6 +14,31 @@ var options = {
     // smartypants: true
 };
 
+function slidedown() {
+    // 参考 http://webdrawer.net/javascript/manyslidedown
+
+    // コンテンツ分のフラグ
+    // 初期値がundefinedだったら閉じるので初期化不要
+    var navFlag = new Array();
+
+    //クリックした時の処理
+    $('h2').click(function(){
+        //何個目のものがクリックされたかを確認
+        var clickNum = $(this).index();
+        //フラグがtrueだったら
+        if(navFlag[clickNum]){
+            $(this).next('.inner').slideDown();
+            $(this).addClass('current');
+            navFlag[clickNum] = false;
+        }
+        else{
+            $(this).next('.inner').slideUp();
+            $(this).removeClass('current');
+            navFlag[clickNum] = true;
+        }
+    });
+}
+
 function render(content, url, origin, argv, source, data) {
     var lines = data.split('\n');
 
@@ -44,8 +69,21 @@ function render(content, url, origin, argv, source, data) {
         lines.push('<div style="float:right;">[`plain`](' + source + ')</div>');
     }
 
-    // content.html('<pre>' + lines.join('\n') + '</pre>');
-    content.html(marked(lines.join('\n'), options));
+    // markdownレンダリング
+    lines = marked(lines.join('\n'), options).split('\n')
+
+    // 見出しを閉じられるようにする
+    lines = lines.map(function(s){
+        s = s.replace('<h2', '</div><h2');
+        s = s.replace('</h2>', '</h2><div class="inner">');
+        return s;
+    });
+
+    // 表示
+    // content.text('<div>' + lines.join('\n') + '</div>');
+    content.html('<div>' + lines.join('\n') + '</div>');
+
+    slidedown();
 
     // リンクにブランチ名を含める
     if(argv != ''){

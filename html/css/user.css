@@ -32,3 +32,21 @@ table tr td {
 table {
   border-spacing: 0px;
 }
+/* PukiWikiライク */
+h1 {
+  background-color: #dddddd;
+  padding: 0.3em;
+}
+h3 {
+  border-top: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  border-left: 10px solid #dddddd;
+  border-right: 5px solid #dddddd;
+  padding: 0.2em;
+  padding-left: 0.4em;
+}
+h4 {
+  border-left: 18px solid #dddddd;
+  padding: 0.1em;
+  padding-left: 0.4em;
+}

@@ -1,5 +1,6 @@
 ﻿# -*- mode: org; coding: utf-8-with-signature-unix -*-
 = たいとる
+[<< README](./README.html)
 
 * 大項目 {#anchor}
   - アンカー `{#korekore}` → {#korekore}

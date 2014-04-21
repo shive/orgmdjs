@@ -22,19 +22,21 @@ function slidedown() {
     var navFlag = new Array();
 
     //クリックした時の処理
-    $('h2').click(function(){
+    $('div#content h2').click(function(){
         //何個目のものがクリックされたかを確認
         var clickNum = $(this).index();
+        // console.log('num: ' + clickNum);
         //フラグがtrueだったら
         if(navFlag[clickNum]){
-            $(this).next('.inner').slideDown();
-            $(this).addClass('current');
             navFlag[clickNum] = false;
-        }
-        else{
-            $(this).next('.inner').slideUp();
-            $(this).removeClass('current');
+            $(this).next('.inner').slideDown();
+            // $(this).addClass('current');
+            // console.log('close');
+        } else {
             navFlag[clickNum] = true;
+            $(this).next('.inner').slideUp();
+            // $(this).removeClass('current');
+            // console.log('open');
         }
     });
 }

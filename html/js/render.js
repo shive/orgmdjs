@@ -21,8 +21,32 @@ function slidedown() {
     // 初期値がundefinedだったら閉じるので初期化不要
     var navFlag = new Array();
 
+    $('div#content h1').click(function(){
+        var allclosed = true;
+        $('div#content h2').each(function(){
+            var num = $(this).index();
+            if(!navFlag[num]){
+                allclosed = false;
+            }
+        });
+        // console.log(allclosed);
+        $('div#content h2').each(function(){
+            var num = $(this).index();
+            if(allclosed){
+                navFlag[num] = false;
+                $(this).next('.inner').slideDown();
+            } else {
+                navFlag[num] = true;
+                $(this).next('.inner').slideUp();
+            }
+        });
+    });
+
     //クリックした時の処理
-    $('div#content h2').click(function(){
+    $('div#content h2').click(function(event){
+        if(event.target != this){
+            return;
+        }
         //何個目のものがクリックされたかを確認
         var clickNum = $(this).index();
         // console.log('num: ' + clickNum);
@@ -76,7 +100,7 @@ function render(content, url, origin, argv, source, data) {
 
     // 見出しを閉じられるようにする
     lines = lines.map(function(s){
-        s = s.replace('<h2', '</div><h2');
+        s = s.replace("<h2", '</div><h2');
         s = s.replace('</h2>', '</h2><div class="inner">');
         return s;
     });

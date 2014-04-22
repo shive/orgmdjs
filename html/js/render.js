@@ -21,7 +21,7 @@ function hideshow_setup() {
     // 初期値がundefinedだったら閉じるので初期化不要
     var navFlag = new Array();
 
-    $('div#content h1').click(function(event){
+    $('div#content h1').dblclick(function(event){
         if(event.target != this){
             return;
         }
@@ -49,7 +49,7 @@ function hideshow_setup() {
     });
 
     //クリックした時の処理
-    $('div#content h2').click(function(event){
+    $('div#content h2').dblclick(function(event){
         if(event.target != this){
             return;
         }

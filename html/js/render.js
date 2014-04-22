@@ -14,7 +14,7 @@ var options = {
     // smartypants: true
 };
 
-function slidedown() {
+function hideshow_setup() {
     // 参考 http://webdrawer.net/javascript/manyslidedown
 
     // コンテンツ分のフラグ
@@ -37,10 +37,12 @@ function slidedown() {
             var num = $(this).index();
             if(allclosed){
                 navFlag[num] = false;
-                $(this).next('.inner').slideDown();
+                $(this).next('.inner').show();
+                $(this).removeClass('closed');
             } else {
                 navFlag[num] = true;
-                $(this).next('.inner').slideUp();
+                $(this).next('.inner').hide();
+                $(this).addClass('closed');
             }
         });
         event.stopPropagation();
@@ -57,14 +59,12 @@ function slidedown() {
         //フラグがtrueだったら
         if(navFlag[clickNum]){
             navFlag[clickNum] = false;
-            $(this).next('.inner').slideDown();
-            // $(this).addClass('current');
-            // console.log('close');
+            $(this).next('.inner').show();
+            $(this).removeClass('closed');
         } else {
             navFlag[clickNum] = true;
-            $(this).next('.inner').slideUp();
-            // $(this).removeClass('current');
-            // console.log('open');
+            $(this).next('.inner').hide();
+            $(this).addClass('closed');
         }
         event.stopPropagation();
     });
@@ -114,7 +114,7 @@ function render(content, url, origin, argv, source, data) {
     // content.text('<div>' + lines.join('\n') + '</div>');
     content.html('<div>' + lines.join('\n') + '</div>');
 
-    slidedown();
+    hideshow_setup();
 
     // リンクにブランチ名を含める
     if(argv != ''){

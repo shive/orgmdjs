@@ -85,7 +85,7 @@ function render(content, url, origin, argv, source, data) {
             s = s.replace(/^\*\*\* /, '#### ');
             s = s.replace(/^\*\*\*\* /, '##### ');
             s = s.replace(/(^|[^`])\{#([\w\d_\-@$]+)\}/g, '$1<a href="#$2" name="$2" style="font-size:xx-small; vertical-align:top;">†</a>');
-            s = s.replace(/(^|[^`])(\[(20\d\d)-(\d\d)-(\d\d) (\d\d):(\d\d)\])/g, '$1<a href="#$3$4$5-$6$7" name="$3$4$5-$6$7" style="font-size:xx-small; vertical-align:top;"><code>$2</code></a>')
+            s = s.replace(/(^|[^`])\[((20\d\d)-(\d\d)-(\d\d) (\d\d):(\d\d))\]/g, '$1<a href="#$3$4$5-$6$7" name="$3$4$5-$6$7" style="font-size:xx-small; vertical-align:top;"><code>$2</code></a>')
             s = s.replace(/(^|[^`])\[\[([^\]]+)\]\[([^\]]+)\]\]/g,'$1[$3]($2)'); // ハイパーリンク
             if(s.match(/^(>\s*)*\s*\|/)){
                 s = s.replace(/^\s*/, '');

@@ -21,7 +21,10 @@ function slidedown() {
     // 初期値がundefinedだったら閉じるので初期化不要
     var navFlag = new Array();
 
-    $('div#content h1').click(function(){
+    $('div#content h1').click(function(event){
+        if(event.target != this){
+            return;
+        }
         var allclosed = true;
         $('div#content h2').each(function(){
             var num = $(this).index();

@@ -43,6 +43,7 @@ function slidedown() {
                 $(this).next('.inner').slideUp();
             }
         });
+        event.stopPropagation();
     });
 
     //クリックした時の処理
@@ -65,6 +66,7 @@ function slidedown() {
             // $(this).removeClass('current');
             // console.log('open');
         }
+        event.stopPropagation();
     });
 }
 

@@ -5,8 +5,8 @@
 
 var options = {
     // renderer: new marked.Renderer(),
-    // gfm: true,
-    // tables: true,
+    gfm: true,
+    tables: true,
     // breaks: true,
     // pedantic: true,
     // sanitize: true,
@@ -137,6 +137,9 @@ function render(content, url, origin, argv, source, data) {
 }
 
 function onload() {
+    hljs.initHighlightingOnLoad();
+    options.highlight = function(code, lang) { return code; }
+
     var content = $('#content');
     var url = document.URL.replace(/\\/g, '/').replace(/^file:\/\/([^/])/, 'file:///$1');
     var origin = url.replace(/^([^/]+\/\/+[^/]+\/).+$/, '$1');

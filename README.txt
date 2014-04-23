@@ -20,4 +20,5 @@
   - `github.css` https://gist.github.com/andyferra/2554919
   - `jQuery` http://jquery.org/license
   - `marked.js` https://github.com/chjj/marked
+  - `highlight.js` http://highlightjs.org/
 

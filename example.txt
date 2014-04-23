@@ -118,3 +118,12 @@
 > > | なごや   | にいがた | さんのへ |
 > > | なごや   | にいがた | さんのへ |
 
+
+* プログラム {#prog}
+```
+int
+main(int argc, char** argv) {
+    printf("Hello, World.\n");
+    return 0;
+}
+```

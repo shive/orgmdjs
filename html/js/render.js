@@ -11,7 +11,10 @@ var options = {
     // pedantic: true,
     // sanitize: true,
     // smartLists: true,
-    // smartypants: true
+    // smartypants: true,
+    highlight: function(code, lang) {
+        return code;
+    }
 };
 
 function hideshow_setup() {
@@ -115,6 +118,7 @@ function render(content, url, origin, argv, source, data) {
     content.html('<div>' + lines.join('\n') + '</div>');
 
     hideshow_setup();
+    hljs.initHighlightingOnLoad();
 
     // リンクにブランチ名を含める
     if(argv != ''){
@@ -137,9 +141,6 @@ function render(content, url, origin, argv, source, data) {
 }
 
 function onload() {
-    hljs.initHighlightingOnLoad();
-    options.highlight = function(code, lang) { return code; }
-
     var content = $('#content');
     var url = document.URL.replace(/\\/g, '/').replace(/^file:\/\/([^/])/, 'file:///$1');
     var origin = url.replace(/^([^/]+\/\/+[^/]+\/).+$/, '$1');
